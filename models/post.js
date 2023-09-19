@@ -11,5 +11,4 @@ const Post = db.define('post',{
 
 Post.belongsTo(User)
 User.hasMany(Post)
-
 module.exports = Post;
