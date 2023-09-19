@@ -1,0 +1,161 @@
+* {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: chocolate;
+}
+#body-geral {
+    min-height: 100vh;
+    background-image: url('/img/Bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center center; /* Centraliza a imagem vertical e horizontalmente */
+
+
+    min-height: 30em;
+    padding-top: 5vh;
+    padding-bottom: 15vh;
+}
+
+/*Home*/
+.orderdiv-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinha os elementos horizontalmente com espaço entre eles */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 3em auto;
+    font-weight: bold;
+}
+/* Estilos para a barra de pesquisa */
+.container {
+    width: 100%;
+    overflow: hidden; /* Limpa o float */
+    margin-bottom: 3em;
+}
+.search-form {
+    float: right; /* Alinha à direita */
+    margin-right: 10px; /* Adicione margem direita conforme necessário */
+}
+.search-form input[type="text"] {
+    padding: 5px 10px;
+    border: 1px solid coral;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+.search-form input[type="submit"] {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-form input[type="submit"]:hover {
+    background-color: rgb(192, 99, 65);
+}
+
+
+/* cabecalho e footer */
+#cabecalho-geral {
+    background-color: #333;
+}
+.nav-link {
+    color: white;
+    margin-left: 10px;
+}
+.navbar-nav .nav-link:hover {
+    background-color: coral;
+    color: black;
+    border-radius: 2em;
+}
+#rodape-geral {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+}
+#logo-cabecalho {
+    border-radius: 10px;
+    width: 3em;
+    height: 3em;
+}
+
+/*Cadastro e login*/
+.text-shadow {
+    text-shadow: 2px 2px 4px coral;
+    border-left: 5px solid coral;
+    text-align: center;
+}
+.form-control{
+    border: 2px solid chocolate;
+    border-radius: 20px;
+}
+.btn{
+    background-color: coral;
+}
+.btn:hover{
+    background-color: chocolate;
+}
+.form-control::placeholder {
+    text-align: center;
+}
+
+/* dashboard */
+.card {
+    width: 50%; /* Define a largura do card como 50% da tela */
+    margin: 0 auto; /* Centraliza o card na tela horizontalmente */
+  }
+  #dashboard1{
+    margin-bottom: 5em;
+}
+.editar{
+    background-color: dodgerblue;
+ }
+.editar:hover{
+    background-color: blue;
+    color: #fff;
+ }
+.excluir{
+    background-color: tomato;
+ }
+ .excluir:hover{
+    background-color: brown;
+    color: #fff;
+ }
+
+/*Criação de post*/
+.card-agg{
+    border: 2px coral solid;
+    border-radius: 25px;
+    padding: 5vh;
+    background-color: rgba( 150, 150, 150, 0.9);
+    margin: 10vh auto;
+}
+#bp1{
+    color: #fff;
+}
+.breadcrumb{
+    margin-left: 1.5vw;
+}
+#bread-criar {
+    margin-left: 2em;
+    width: 20%;
+    background-color: rgba( 0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+.emoji-label {
+    font-size: 1.5em;
+}
+#textAreaCriar{
+    height: 50vh;
+}
+.custom-button {
+    margin-left: 30%; 
+}
