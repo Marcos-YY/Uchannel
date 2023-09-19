@@ -1,0 +1,57 @@
+{{#if messages.aviso}}
+    <div class="alert alert-success text-center" role="success">
+        {{messages.aviso}}
+    </div>
+{{/if}}
+<div class="card-agg">
+    {{#if busca}}
+    <h1 class="text-shadow">Busca por : {{busca}}</h1>
+    <div class="text-center">
+        {{#if postsQtdd}}
+            {{postsQtdd}} Resultado(s) encontrado(s)
+        {{else}}
+            Nenhum reultado foi encontrado para a busca: {{busca}}
+        {{/if}}
+    </div>
+       {{else}}
+    <h1 class="text-shadow">Publicações</h1>          
+    {{/if}}
+    <div class="orderdiv-home">
+        <span>Ordenar por:</span>
+        <form action="/" method="get">
+            <input type="hidden" name="busca" value="{{this.busca}}">
+            <input type="hidden" name="ordem" value="maisAntigo">
+            <button type="submit" class="btn">Mais antigo</button>
+        </form>
+        <form action="/" method="get">
+            <input type="hidden" name="busca" value="{{this.busca}}">
+            <input type="hidden" name="ordem" value="maisNovo">
+            <button type="submit" class="btn">Mais recente</button>
+        </form>
+        <a href="/" class="btn">Redefinir filtro</a>
+    </div>
+<div class="container">
+    <form action="/" method="get" class="search-form">
+        <input type="text" name="busca" placeholder="Pesquise um tema">
+        <input type="submit" class="btn" value="Pesquisar">
+    </form>
+</div>
+
+
+
+    {{#each PostResgatado}}
+       <div class="card">
+  <div class="card-header">
+    Data
+  </div>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p>"{{this.conteudo}}"</p>
+            <footer class="blockquote-footer">Por <cite title="Source Title">{{this.user.nome}}</cite></footer>
+        </blockquote>
+        </div>
+    </div>
+    {{/each}}
+
+
+</div>

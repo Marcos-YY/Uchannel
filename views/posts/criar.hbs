@@ -1,0 +1,29 @@
+<div id="bread-criar">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/dashboard">Meu feed</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id="bp1">Criar post</li>
+        </ol>
+    </nav>
+</div>
+
+
+<div class="card-agg">
+<h1 class="text-shadow">Criação de post</h1>
+
+<div class="container mt-5">
+    <form action="/criarPost" method="post">
+        <div class="mx-auto w-50 text-center ">
+            <label for="Post" class="emoji-label">Hmm o que será que vem por aí? &#129300;</label>
+            <div class="form-floating">
+                <textarea class="form-control" name="conteudo" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px;"></textarea>
+                <label for="floatingTextarea2">Escreva abaixo</label>
+            </div>
+        </div>
+        <div class="text-left mt-3"> <!-- Alinha o botão à esquerda e adiciona margem superior -->
+            <button type="submit" class="btn custom-button">Publicar</button> <!-- Use uma classe personalizada -->
+        </div>
+    </form>
+</div>
+</div>

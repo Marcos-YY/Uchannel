@@ -1,0 +1,49 @@
+<div id="Bg">
+<div class="card" id="dashboard1">
+  <div class="card-header">
+    Sua área
+  </div>
+{{#if messages.aviso}}
+    <div class="alert alert-success text-center" role="success">
+        {{messages.aviso}} &#128540;
+    </div>
+{{/if}}
+{{#if messages.erro}}
+    <div class="alert alert-danger text-center" role="alert">
+        {{messages.erro}} &#128532;
+    </div>
+{{/if}}
+  <div class="card-body">
+    <h5 class="card-title">Lista de posts</h5>
+    <p class="card-text">Está pensando em algo?</p>
+    <a href="/paginaCriarPost" class="btn">Criar post</a>
+  </div>
+</div>
+{{#if postsVazio}}
+  <div class="alert alert-warning text-center" role="alert">
+    Você ainda não tem nenhum postagem ativo <a href="/paginaCriarPost" class="alert-link">Crie uma agora!</a>
+  </div>
+{{/if}}
+
+
+  {{#each PostsResgatados}}    
+<div class="card mb-4">
+  <div class="card-header">
+    Publicado em
+  </div>
+  <div class="card-body text-center">
+    <h5 class="card-title">{{this.conteudo}}</h5>
+  </div>
+  <div class="card-footer text-muted">
+    Editado há ? dias
+  </div>
+<div class="card-footer d-flex justify-content-end">
+    <a href="/paginaEditar/{{this.id}}" class="btn editar me-2">Editar</a>
+    <form action="/excluirPost" method="post">
+    <input type="hidden" name="id" value="{{this.id}}">
+        <button type="submit" class="btn excluir">Excluir</button>
+    </form>
+</div>
+</div>
+{{/each}}
+</div>

@@ -1,0 +1,25 @@
+<div class="card-agg">
+<h1 class="text-shadow">Login</h1>
+{{#if messages.erro}}
+    <div class="alert alert-danger text-center" role="alert">
+        {{messages.erro}}
+    </div>
+{{/if}}
+
+<div class="container text-center mt-5">
+    
+    <form action="/login" method="post" class="mx-auto w-50 ">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" placeholder="Digite email para login" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" name="senha" class="form-control" placeholder="Digite a senha" required>
+        </div>
+        <button type="submit" class="btn">Entrar</button>
+    </form>
+    <br>
+    Não possui conta? faça o <a href="/paginaCadastrar">Cadastro</a>
+</div>
+</div>

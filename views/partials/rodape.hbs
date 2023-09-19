@@ -1,0 +1,23 @@
+<footer>
+<ul class="nav flex-column">
+  <li class="nav-item">
+    <a class="nav-link" href="/">Página inicial</a>
+  </li>
+  {{#if session.userid}}
+    {{!-- Sem links --}}
+  {{else}}
+  <li class="nav-item">
+    <a class="nav-link" href="#">login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Registrar-se</a>
+  </li>
+  {{/if}}
+  <li class="nav-item">
+    <a class="nav-link" href="#">Sobre a Uchannel</a>
+  </li>
+</ul>
+<div>
+    <p><h1 class="display-6">Uchannel &copy; 2023</h1></p>
+</div>
+</footer>

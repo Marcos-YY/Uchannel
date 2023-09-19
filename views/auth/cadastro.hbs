@@ -1,0 +1,32 @@
+<div class="card-agg">
+<h1 class="text-shadow">Cadastre-se e entre em discussões aleatórias</h1>
+{{#if messages.aviso}}
+    <div class="alert alert-danger text-center" role="alert">
+        {{messages.aviso}}
+    </div>
+{{/if}}
+<div class="container text-center mt-5">
+    <form action="/cadastrar" method="post" class="mx-auto w-50">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" name="nome" class="form-control" placeholder="Digite seu nome" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" placeholder="Digite o email para login" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" name="password" class="form-control" placeholder="Digite a senha" required>
+        </div>
+            <div class="mb-3">
+                <label for="confirmpassword"  class="form-label">Confirmação de senha:</label>
+            <input type="password" name="confirmpassword" class="form-control" placeholder="Confirme a sua senha" required>
+            <div class="form-text">Nunca usaremos seus dados indevidamente</div>
+        </div>
+        <button type="submit" class="btn">Cadastrar-se</button>
+    </form>
+    <br>
+    Já possui conta? faça o <a href="/paginaLogin">Login</a>
+</div>
+</div>
